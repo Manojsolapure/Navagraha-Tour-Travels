@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navagraha Tour & Travels</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.5; color: #333; padding-top: 68px; }
+    a { text-decoration: none; }
+
+    .topbar {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+      padding: 12px 40px; display: flex; align-items: center; justify-content: space-between;
+      z-index: 1000;
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; color: #e8b176; }
+    .navbar a { margin-left: 24px; font-weight: bold; color: #fff; transition: color 0.3s; }
+    .navbar a:hover { color: #f0b429; }
+
+    .hero {
+      min-height: 100vh;
+      background: url('2a.png') center/cover no-repeat;
+      display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;
+      padding: 140px 40px 40px;
+    }
+    .explore-section {
+      max-width: 80%; color: #fff; animation: colorchange 3s infinite;
+      font-size: 3.5rem; font-weight: bold; margin-bottom: 1px; text-align: center; align-self: center;
+    }
+    .typing-section { max-width: 60%; color: #fff; font-size: 3.4rem; text-align: left; }
+    .hero button {
+      background-color: #8c190c; border: none; padding: 12px 32px; color: #fff;
+      cursor: pointer; border-radius: 4px; font-size: 1rem; margin-top: 24px; transition: background 0.3s;
+    }
+    .hero button:hover { background-color: #d5961f; }
+
+    @keyframes colorchange {
+      0% { color: #f0b429; } 25% { color: #409749; } 50% { color: #65309e; }
+      75% { color: #920e0e; } 100% { color: #c687cf; }
+    }
+
+    section { padding: 80px 20px; }
+    h2 { text-align: center; margin-bottom: 60px; font-size: 3rem; }
+
+    .packages {
+      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+    }
+    .card {
+      border: 1px solid #ccc; border-radius: 8px; overflow: hidden; width: 280px; text-align: center;
+      background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card h3 { margin: 14px 0 8px; }
+
+    .about, .contact, .blog { max-width: 800px; margin: 0 auto; }
+
+    footer { background-color: #333; color: #fff; text-align: center; padding: 24px 12px; }
+
+    /* Modal */
+    .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0;
+             width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
+    .modal-content {
+      background-color: #fff; margin: 8% auto; padding: 24px; border-radius: 8px;
+      max-width: 520px; box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .close { float: right; font-size: 1.5rem; cursor: pointer; }
+
+    /* Form styling */
+    form input, form select {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 4px;
+    }
+    
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Navagraha Tour & Travels</div>
+    <nav class="navbar">
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="explore-section">Explore India with Us</div>
+    <br><br><br>
+    <div class="typing-section">You choose the place, we’ll handle the ride</div>
+    <button id="openBooking">Book Your Tour Now</button>
+  </section>
+
+  <section id="packages">
+    <h2>Popular Destinations</h2>
+    <div class="packages">
+      <!-- Destination cards go here -->
+       <div class="card">
+        <img src="3a.png" alt="Tirupati">
+        <h3>Tirupati</h3>
+        <p>2 Days Tour – ₹8500</p>
+      </div>
+      <div class="card">
+        <img src="3b.png" alt="Varanasi">
+        <h3>Varanasi</h3>
+        <p>4 Days Tour – ₹15000</p>
+      </div>
+      <div class="card">
+        <img src="3c.pngG"" alt="Kerala">
+        <h3>Kerala</h3>
+        <p>5 Days Tour – ₹12000</p>
+      </div>
+      <div class="card">
+        <img src="3d.png" alt="Jaipur">
+        <h3>Jaipur</h3>
+        <p>3 Days Tour – ₹10000</p>
+      </div>
+      <div class="card">
+        <img src="3f.png"" alt="Jaipur">
+        <h3>Mysore</h3>
+        <p>1 Day Tour – ₹3000</p>
+      </div>
+      <div class="card">
+        <img src="3g.pngG"" alt="Jaipur">
+        <h3>coorg</h3>
+        <p>3 Days Tour – ₹10000</p>
+      </div>
+      <div class="card">
+        <img src="3i.png"" alt="Jaipur">
+        <h3>Ooty</h3>
+        <p>5 Days Tour – ₹15000</p>
+      </div>
+      <div class="card">
+        <img src="3j.png"" alt="Jaipur">
+        <h3>Murdeshwar</h3>
+        <p>3 Days Tour – ₹10000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Navagraha Tour & Travels is a Bangalore-based travel company offering curated tours across India. We specialize in religious tours, group travels, and family-friendly itineraries with full support and comfort. Our mission is to deliver affordable, memorable, and safe journeys with professional drivers and 24/7 customer support.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div style="width: 100%; height: 300px; margin-bottom: 20px;">
+      <iframe 
+        src="https://www.google.com/maps?q=6,%207th%20Cross%20Road,%20Govind%20Raj%20Nagar,%20Vijay%20Nagar,%20Bangalore%20560040&output=embed"
+        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0">
+      </iframe>
+    </div>
+    <p><strong>Phone:</strong> 8431435208</p>
+    <p><strong>Email:</strong> <a href="mailto:navagraha.tour.travels@outlook.com">navagraha.tour.travels@outlook.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/918431435208" target="_blank">Chat with us</a></p>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Latest Travel Tips & Blogs</h2>
+    <ul>
+      <li>Top 5 Pilgrimage Sites to Visit in India</li>
+      <li>How to Plan Your First Group Tour</li>
+      <li>What to Pack for a Spiritual Journey</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Navagraha Tour & Travels. All rights reserved.
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Book Your Tour</h2>
+
+      <!-- SIMPLE MAILTO VERSION -->
+      <form action="mailto:navagraha.tour.travels@outlook.com"
+            method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required>
+
+        <label for="from">From (City):</label>
+        <input type="text" id="from" name="From" required>
+
+        <label for="to">To (Destination):</label>
+        <input type="text" id="to" name="To" required>
+
+        <label for="fromDate">From&nbsp;Date:</label>
+        <input type="date" id="fromDate" name="From_Date" required>
+
+        <label for="toDate">To&nbsp;Date:</label>
+        <input type="date" id="toDate" name="To_Date" required>
+
+        <label for="km">Distance (Average&nbsp;KM):</label>
+        <input type="number" id="km" name="Distance_KM" min="1" required>
+
+        <label for="days">Number of Days:</label>
+        <input type="number" id="days" name="Number_of_Days" min="1" required>
+
+        <label for="people">Number of People:</label>
+        <input type="number" id="people" name="Number_of_People" min="1" required>
+
+        <label for="food">Food Option:</label>
+        <select id="food" name="Food_Option">
+          <option value="With Food">With Food</option>
+          <option value="Without Food">Without Food</option>
+        </select>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+
+      <!--
+        ► If you prefer silent server‑side e‑mail (no mail client pop‑up),
+          replace the form action with a service endpoint (e.g. FormSubmit, EmailJS, or your own backend script).
+      -->
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("bookingModal");
+    const openBtn = document.getElementById("openBooking");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.addEventListener("click", () => modal.style.display = "block");
+    closeBtn.addEventListener("click", () => modal.style.display = "none");
+    window.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
+  </script>
+</body>
+</html>
