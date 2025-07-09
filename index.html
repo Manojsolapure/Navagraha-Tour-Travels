@@ -77,7 +77,13 @@
 </head>
 <body>
   <header class="topbar">
+  <div style="display: flex; align-items: center;">
+    <a href="#" onclick="location.reload();">
+      <img src="image-removebg-preview.png" alt="Logo Icon" style="height: 40px; margin-right: 10px;">
+    </a>
     <div class="logo">Navagraha Tour & Travels</div>
+  </div>
+
     <nav class="navbar">
       <a href="#packages">Packages</a>
       <a href="#about">About</a>
@@ -93,52 +99,99 @@
     <button id="openBooking">Book Your Tour Now</button>
   </section>
 
-  <section id="packages">
-    <h2>Popular Destinations</h2>
-    <div class="packages">
-      <!-- Destination cards go here -->
-       <div class="card">
-        <img src="3a.png" alt="Tirupati">
-        <h3>Tirupati</h3>
-        <p>2 Days Tour – ₹8500</p>
-      </div>
-      <div class="card">
-        <img src="3b.png" alt="Varanasi">
-        <h3>Varanasi</h3>
-        <p>4 Days Tour – ₹15000</p>
-      </div>
-      <div class="card">
-        <img src="3c.png" alt="Kerala">
-        <h3>Kerala</h3>
-        <p>5 Days Tour – ₹12000</p>
-      </div>
-      <div class="card">
-        <img src="3d.png" alt="Jaipur">
-        <h3>Jaipur</h3>
-        <p>3 Days Tour – ₹10000</p>
-      </div>
-      <div class="card">
-        <img src="3f.png" alt="Jaipur">
-        <h3>Mysore</h3>
-        <p>1 Day Tour – ₹3000</p>
-      </div>
-      <div class="card">
-        <img src="3g.png" alt="Jaipur">
-        <h3>coorg</h3>
-        <p>3 Days Tour – ₹10000</p>
-      </div>
-      <div class="card">
-        <img src="3i.png" alt="Jaipur">
-        <h3>Ooty</h3>
-        <p>5 Days Tour – ₹15000</p>
-      </div>
-      <div class="card">
-        <img src="3j.png"" alt="Jaipur">
-        <h3>Murdeshwar</h3>
-        <p>3 Days Tour – ₹10000</p>
-      </div>
+  <!-- Inside your section id="packages", replace the .packages content with this -->
+<section id="packages">
+  <h2>Popular Destinations</h2>
+  <div class="packages">
+    <div class="card">
+      <img src="3a.png" alt="Tirupati">
+      <h3>Tirupati</h3>
+      <p>2 Days Tour – ₹8500</p>
+      <a href="https://en.wikipedia.org/wiki/Tirupati" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="3b.png" alt="Varanasi">
+      <h3>Varanasi</h3>
+      <p>4 Days Tour – ₹15000</p>
+      <a href="https://en.wikipedia.org/wiki/Varanasi" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3c.png" alt="Kerala">
+      <h3>Kerala</h3>
+      <p>5 Days Tour – ₹12000</p>
+      <a href="https://en.wikipedia.org/wiki/Kerala" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3d.png" alt="Jaipur">
+      <h3>Jaipur</h3>
+      <p>3 Days Tour – ₹10000</p>
+      <a href="https://en.wikipedia.org/wiki/Jaipur" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3f.png" alt="Mysore">
+      <h3>Mysore</h3>
+      <p>1 Day Tour – ₹3000</p>
+      <a href="https://en.wikipedia.org/wiki/Mysore" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3g.png" alt="Coorg">
+      <h3>Coorg</h3>
+      <p>3 Days Tour – ₹10000</p>
+      <a href="https://en.wikipedia.org/wiki/Coorg" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3i.png" alt="Ooty">
+      <h3>Ooty</h3>
+      <p>5 Days Tour – ₹15000</p>
+      <a href="https://en.wikipedia.org/wiki/Ooty" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="3j.png" alt="Murdeshwar">
+      <h3>Murdeshwar</h3>
+      <p>3 Days Tour – ₹10000</p>
+      <a href="https://en.wikipedia.org/wiki/Murdeshwar" target="_blank">
+        <button style="margin-bottom: 10px; background-color: #8c190c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          Explore Now
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
 
   <section id="about" class="about">
     <h2>About Us</h2>
@@ -180,39 +233,66 @@
 
       <!-- SIMPLE MAILTO VERSION -->
       <form action="mailto:navagraha.tour.travels@outlook.com"
-            method="POST" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="Name" required>
+      method="POST" enctype="text/plain">
 
-        <label for="from">From (City):</label>
-        <input type="text" id="from" name="From" required>
+  <label for="name">Name: <span style="color:red">*</span></label>
+  <input type="text" id="name" name="Name" required>
 
-        <label for="to">To (Destination):</label>
-        <input type="text" id="to" name="To" required>
+  <label for="phone">Phone Number: <span style="color:red">*</span></label>
+<div style="display:flex;align-items:center;">
+  <span style="padding:6px;border:1px solid #ccc;border-right:none;background:#f0f0f0;">+91</span>
 
-        <label for="fromDate">From&nbsp;Date:</label>
-        <input type="date" id="fromDate" name="From_Date" required>
+  <input
+    type="tel"
+    id="phone"
+    name="Phone"
+    placeholder="10‑digit number"
+    inputmode="numeric"
+    pattern="[0-9]{10}"
+    minlength="10"
+    maxlength="10"
+    required
+    style="flex:1;border:1px solid #ccc;border-left:none;padding:6px;"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '');             // strip non‑digits as you type
+             this.setCustomValidity('');"                                // clear old message
+    oninvalid="this.setCustomValidity('Please enter a valid 10‑digit mobile number (digits only).');">
+</div>
+  <label for="from">From (City): <span style="color:red">*</span></label>
+  <input type="text" id="from" name="From" required>
 
-        <label for="toDate">To&nbsp;Date:</label>
-        <input type="date" id="toDate" name="To_Date" required>
+  <label for="to">To (Destination): <span style="color:red">*</span></label>
+  <input type="text" id="to" name="To" required>
 
-        <label for="km">Distance (Average&nbsp;KM):</label>
-        <input type="number" id="km" name="Distance_KM" min="1" required>
+  <label for="fromDate">From&nbsp;Date: <span style="color:red">*</span></label>
+  <input type="date" id="fromDate" name="From_Date" required>
 
-        <label for="days">Number of Days:</label>
-        <input type="number" id="days" name="Number_of_Days" min="1" required>
+  <label for="toDate">To&nbsp;Date: <span style="color:red">*</span></label>
+  <input type="date" id="toDate" name="To_Date" required>
 
-        <label for="people">Number of People:</label>
-        <input type="number" id="people" name="Number_of_People" min="1" required>
+  <label for="km">Distance (Average&nbsp;KM): <span style="color:red">*</span></label>
+  <input type="number" id="km" name="Distance_KM" min="1" required>
 
-        <label for="food">Food Option:</label>
-        <select id="food" name="Food_Option">
-          <option value="With Food">With Food</option>
-          <option value="Without Food">Without Food</option>
-        </select>
+  <label for="days">Number of Days:</label>
+  <input type="number" id="days" name="Number_of_Days" min="1">
 
-        <button type="submit">Submit Booking</button>
-      </form>
+  <label for="people">Number of People: <span style="color:red">*</span></label>
+  <input type="number" id="people" name="Number_of_People" min="1" required>
+
+  <label for="food">Food Option:</label>
+  <select id="food" name="Food_Option">
+    <option value="With Food">With Food</option>
+    <option value="Without Food">Without Food</option>
+  </select>
+
+  <label for="us">Message for Us:</label>
+<input type="text" id="us" name="Message_For_Us">
+
+  <button type="submit" style="background-color:  #8c190e; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+  Submit Booking
+</button>
+
+</form>
+
 
       <!--
         ► If you prefer silent server‑side e‑mail (no mail client pop‑up),
